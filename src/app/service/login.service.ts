@@ -11,7 +11,7 @@ export class LoginService {
   
     login(user) {
      console.log("Login service");
-     const req = this.http.post('https://effort-tracker-back.herokuapp.com/login',{
+     const req = this.http.post('https://effort-tracker-back.herokuapp.com/user',{
       user
      }).subscribe(
      res => {

@@ -8,12 +8,14 @@ import 'rxjs/add/operator/map'
 export class LoginService {
 
   constructor(private http: HttpClient) { }
-
+  
     login(user) {
-     const req = this.http.post('https://jsonplaceholder.typicode.com/posts',{
+     console.log("Login service");
+     const req = this.http.post('https://effort-tracker-back.herokuapp.com/login',{
       user
      }).subscribe(
      res => {
+       console.log(res);
         return res;
      },
        err =>{

@@ -23,7 +23,8 @@ export class LoginService {
         return res;
      },
        err =>{
-         console.log('Error'+err);
+         console.log('Error'+err.status);
+          console.log('Error'+err.message);
        }
      )
   }
